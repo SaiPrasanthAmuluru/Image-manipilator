@@ -1,24 +1,207 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="NeoAstra_Task" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nsf-A1-f2a">
+                                <rect key="frame" x="20" y="593" width="335" height="74"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Upload Image">
+                                            <attributes>
+                                                <font key="NSFont" size="25" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="addImageClicked" destination="BYZ-38-t0r" eventType="touchUpInside" id="lUt-ch-U17"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Nsf-A1-f2a" secondAttribute="trailing" constant="20" id="30h-Ah-sX5"/>
+                            <constraint firstItem="Nsf-A1-f2a" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.111274" id="bGz-Dt-2j2"/>
+                            <constraint firstItem="Nsf-A1-f2a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="brM-ve-zhG"/>
+                            <constraint firstItem="Nsf-A1-f2a" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="fBO-WC-HL2"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="19.921875" y="79.941434846266461"/>
+        </scene>
+        <!--Edit View Controller-->
+        <scene sceneID="LNR-aR-PX5">
+            <objects>
+                <viewController storyboardIdentifier="EditViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9ix-WC-sTl" customClass="EditViewController" customModule="NeoAstra_Task" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="r8g-sl-2kV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2k-rH-0sQ">
+                                <rect key="frame" x="294.5" y="0.0" width="55.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                                <connections>
+                                    <action selector="saveClicked:" destination="9ix-WC-sTl" eventType="touchUpInside" id="sTb-QN-JIf"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VfN-kV-Xhw">
+                                <rect key="frame" x="0.0" y="51" width="375" height="545"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="LHI-OK-kRT">
+                                <rect key="frame" x="13" y="604" width="349" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1rg-0T-hlC">
+                                        <rect key="frame" x="0.0" y="0.0" width="67" height="50"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="flip.horizontal.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="flipHorizontally:" destination="9ix-WC-sTl" eventType="touchUpInside" id="JX6-fX-BA0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZIS-7P-M2k">
+                                        <rect key="frame" x="94" y="0.0" width="67" height="50"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="trapezoid.and.line.vertical.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="flipVertically:" destination="9ix-WC-sTl" eventType="touchUpInside" id="GRR-UE-Exb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFd-B4-IHF">
+                                        <rect key="frame" x="188" y="0.0" width="67" height="50"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="rotate.right" catalog="system"/>
+                                        <connections>
+                                            <action selector="rotateImage:" destination="9ix-WC-sTl" eventType="touchUpInside" id="v8e-mQ-gya"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WUd-6u-ph2">
+                                        <rect key="frame" x="282" y="0.0" width="67" height="50"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="crop" catalog="system"/>
+                                        <connections>
+                                            <action selector="cropImage:" destination="9ix-WC-sTl" eventType="touchUpInside" id="Cdh-jr-LVs"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Pb5-4i-kDQ"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GEf-9l-g60"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VfN-kV-Xhw" firstAttribute="top" secondItem="GEf-9l-g60" secondAttribute="top" constant="51" id="7eX-Ge-6Ca"/>
+                            <constraint firstItem="b2k-rH-0sQ" firstAttribute="top" secondItem="GEf-9l-g60" secondAttribute="top" id="EqQ-jK-bFd"/>
+                            <constraint firstItem="LHI-OK-kRT" firstAttribute="top" secondItem="VfN-kV-Xhw" secondAttribute="bottom" constant="8" symbolic="YES" id="NuT-jZ-Ygp"/>
+                            <constraint firstItem="VfN-kV-Xhw" firstAttribute="trailing" secondItem="GEf-9l-g60" secondAttribute="trailing" id="PQb-FH-Nqa"/>
+                            <constraint firstItem="GEf-9l-g60" firstAttribute="trailing" secondItem="b2k-rH-0sQ" secondAttribute="trailing" constant="25" id="dZW-h8-3Ns"/>
+                            <constraint firstItem="GEf-9l-g60" firstAttribute="bottom" secondItem="LHI-OK-kRT" secondAttribute="bottom" constant="13" id="eTt-bp-Tis"/>
+                            <constraint firstItem="GEf-9l-g60" firstAttribute="trailing" secondItem="LHI-OK-kRT" secondAttribute="trailing" constant="13" id="vig-NS-Y5p"/>
+                            <constraint firstItem="LHI-OK-kRT" firstAttribute="leading" secondItem="GEf-9l-g60" secondAttribute="leading" constant="13" id="xy2-Jr-ZbH"/>
+                            <constraint firstItem="VfN-kV-Xhw" firstAttribute="leading" secondItem="GEf-9l-g60" secondAttribute="leading" id="yjo-bU-OdQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="EditingImage" destination="VfN-kV-Xhw" id="dvr-9y-5aB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f9M-Wd-opG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="879.20000000000005" y="79.610194902548727"/>
+        </scene>
+        <!--Crop Image View Controller-->
+        <scene sceneID="k7U-LI-dAd">
+            <objects>
+                <viewController storyboardIdentifier="CropImageViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Hhr-YI-kNf" customClass="CropImageViewController" customModule="NeoAstra_Task" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eYj-Vs-rfq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lQU-Gj-CAL">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="572"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EKF-m7-OXl">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="572"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RKl-jH-oqG">
+                                        <rect key="frame" x="24" y="170" width="327" height="327"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="RKl-jH-oqG" secondAttribute="height" multiplier="1:1" id="9Jg-MM-wE7"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="EKF-m7-OXl" firstAttribute="top" secondItem="lQU-Gj-CAL" secondAttribute="top" id="6rL-g8-VmL"/>
+                                    <constraint firstItem="EKF-m7-OXl" firstAttribute="leading" secondItem="lQU-Gj-CAL" secondAttribute="leading" id="9vo-di-WxN"/>
+                                    <constraint firstAttribute="trailing" secondItem="EKF-m7-OXl" secondAttribute="trailing" id="ZkD-Rn-F0f"/>
+                                    <constraint firstItem="EKF-m7-OXl" firstAttribute="centerX" secondItem="lQU-Gj-CAL" secondAttribute="centerX" id="h0T-7Y-UGi"/>
+                                    <constraint firstAttribute="bottom" secondItem="EKF-m7-OXl" secondAttribute="bottom" id="iIO-v6-owY"/>
+                                    <constraint firstItem="EKF-m7-OXl" firstAttribute="centerY" secondItem="lQU-Gj-CAL" secondAttribute="centerY" id="yo9-Dr-jF5"/>
+                                </constraints>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FE5-tx-HcZ">
+                                <rect key="frame" x="160" y="606" width="55.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Crop"/>
+                                <connections>
+                                    <action selector="button_crop_clicked:" destination="Hhr-YI-kNf" eventType="touchUpInside" id="f2q-du-toP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5Xp-ye-CbE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lQU-Gj-CAL" firstAttribute="top" secondItem="5Xp-ye-CbE" secondAttribute="top" id="Ctc-jE-vci"/>
+                            <constraint firstItem="5Xp-ye-CbE" firstAttribute="bottom" secondItem="FE5-tx-HcZ" secondAttribute="bottom" constant="30" id="FDK-Oh-itN"/>
+                            <constraint firstItem="RKl-jH-oqG" firstAttribute="centerY" secondItem="5Xp-ye-CbE" secondAttribute="centerY" id="PZB-Qy-g3G"/>
+                            <constraint firstItem="5Xp-ye-CbE" firstAttribute="bottom" secondItem="lQU-Gj-CAL" secondAttribute="bottom" constant="95" id="Utl-w1-osX"/>
+                            <constraint firstItem="FE5-tx-HcZ" firstAttribute="centerX" secondItem="eYj-Vs-rfq" secondAttribute="centerX" id="kQ9-n5-oSa"/>
+                            <constraint firstItem="lQU-Gj-CAL" firstAttribute="trailing" secondItem="5Xp-ye-CbE" secondAttribute="trailing" id="qTe-ww-juB"/>
+                            <constraint firstItem="RKl-jH-oqG" firstAttribute="leading" secondItem="5Xp-ye-CbE" secondAttribute="leading" constant="24" id="tWg-E1-8xr"/>
+                            <constraint firstItem="lQU-Gj-CAL" firstAttribute="leading" secondItem="5Xp-ye-CbE" secondAttribute="leading" id="ukO-oe-GJH"/>
+                            <constraint firstItem="5Xp-ye-CbE" firstAttribute="trailing" secondItem="RKl-jH-oqG" secondAttribute="trailing" constant="24" id="zPl-NP-2S4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="EKF-m7-OXl" id="uhF-vB-2Ea"/>
+                        <outlet property="scrollView" destination="lQU-Gj-CAL" id="8Gr-Ue-i1f"/>
+                        <outlet property="viewTocrop" destination="RKl-jH-oqG" id="XLc-Si-I87"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T75-jd-68z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1661.5999999999999" y="79.610194902548727"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="crop" catalog="system" width="128" height="116"/>
+        <image name="flip.horizontal.fill" catalog="system" width="128" height="112"/>
+        <image name="rotate.right" catalog="system" width="118" height="128"/>
+        <image name="trapezoid.and.line.vertical.fill" catalog="system" width="125" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

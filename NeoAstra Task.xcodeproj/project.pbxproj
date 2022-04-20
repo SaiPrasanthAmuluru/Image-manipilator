@@ -9,13 +9,19 @@
 /* Begin PBXBuildFile section */
 		4A0E9512280D7A5800FED03A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0E9511280D7A5800FED03A /* AppDelegate.swift */; };
 		4A0E9514280D7A5800FED03A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0E9513280D7A5800FED03A /* SceneDelegate.swift */; };
-		4A0E9516280D7A5800FED03A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0E9515280D7A5800FED03A /* ViewController.swift */; };
+		4A0E9516280D7A5800FED03A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0E9515280D7A5800FED03A /* HomeView.swift */; };
 		4A0E9519280D7A5800FED03A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A0E9517280D7A5800FED03A /* Main.storyboard */; };
 		4A0E951B280D7A5A00FED03A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A0E951A280D7A5A00FED03A /* Assets.xcassets */; };
 		4A0E951E280D7A5A00FED03A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A0E951C280D7A5A00FED03A /* LaunchScreen.storyboard */; };
 		4A0E9529280D7A5B00FED03A /* NeoAstra_TaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0E9528280D7A5B00FED03A /* NeoAstra_TaskTests.swift */; };
 		4A0E9533280D7A5B00FED03A /* NeoAstra_TaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0E9532280D7A5B00FED03A /* NeoAstra_TaskUITests.swift */; };
 		4A0E9535280D7A5B00FED03A /* NeoAstra_TaskUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0E9534280D7A5B00FED03A /* NeoAstra_TaskUITestsLaunchTests.swift */; };
+		4A0E9542280D7CB400FED03A /* HomeViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0E9541280D7CB400FED03A /* HomeViewExtension.swift */; };
+		4A0E9544280D80AF00FED03A /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0E9543280D80AF00FED03A /* EditViewController.swift */; };
+		4A229A7B280E8F8000EAC830 /* Support.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A229A7A280E8F8000EAC830 /* Support.swift */; };
+		4A995234280E8452009DC0C1 /* CropImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A995233280E8452009DC0C1 /* CropImageViewController.swift */; };
+		4A995236280E8493009DC0C1 /* ImageCropHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A995235280E8493009DC0C1 /* ImageCropHandler.swift */; };
+		4A995238280E84A2009DC0C1 /* ImageViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A995237280E84A2009DC0C1 /* ImageViewHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +45,7 @@
 		4A0E950E280D7A5800FED03A /* NeoAstra Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NeoAstra Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A0E9511280D7A5800FED03A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A0E9513280D7A5800FED03A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4A0E9515280D7A5800FED03A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4A0E9515280D7A5800FED03A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4A0E9518280D7A5800FED03A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4A0E951A280D7A5A00FED03A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A0E951D280D7A5A00FED03A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +55,12 @@
 		4A0E952E280D7A5B00FED03A /* NeoAstra TaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NeoAstra TaskUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A0E9532280D7A5B00FED03A /* NeoAstra_TaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeoAstra_TaskUITests.swift; sourceTree = "<group>"; };
 		4A0E9534280D7A5B00FED03A /* NeoAstra_TaskUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeoAstra_TaskUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4A0E9541280D7CB400FED03A /* HomeViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewExtension.swift; sourceTree = "<group>"; };
+		4A0E9543280D80AF00FED03A /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		4A229A7A280E8F8000EAC830 /* Support.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Support.swift; sourceTree = "<group>"; };
+		4A995233280E8452009DC0C1 /* CropImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropImageViewController.swift; sourceTree = "<group>"; };
+		4A995235280E8493009DC0C1 /* ImageCropHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCropHandler.swift; sourceTree = "<group>"; };
+		4A995237280E84A2009DC0C1 /* ImageViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +111,16 @@
 		4A0E9510280D7A5800FED03A /* NeoAstra Task */ = {
 			isa = PBXGroup;
 			children = (
+				4A995232280E8443009DC0C1 /* CropImage */,
 				4A0E9511280D7A5800FED03A /* AppDelegate.swift */,
 				4A0E9513280D7A5800FED03A /* SceneDelegate.swift */,
-				4A0E9515280D7A5800FED03A /* ViewController.swift */,
+				4A0E9515280D7A5800FED03A /* HomeView.swift */,
+				4A0E9541280D7CB400FED03A /* HomeViewExtension.swift */,
 				4A0E9517280D7A5800FED03A /* Main.storyboard */,
 				4A0E951A280D7A5A00FED03A /* Assets.xcassets */,
 				4A0E951C280D7A5A00FED03A /* LaunchScreen.storyboard */,
 				4A0E951F280D7A5A00FED03A /* Info.plist */,
+				4A0E9543280D80AF00FED03A /* EditViewController.swift */,
 			);
 			path = "NeoAstra Task";
 			sourceTree = "<group>";
@@ -125,6 +140,17 @@
 				4A0E9534280D7A5B00FED03A /* NeoAstra_TaskUITestsLaunchTests.swift */,
 			);
 			path = "NeoAstra TaskUITests";
+			sourceTree = "<group>";
+		};
+		4A995232280E8443009DC0C1 /* CropImage */ = {
+			isa = PBXGroup;
+			children = (
+				4A995233280E8452009DC0C1 /* CropImageViewController.swift */,
+				4A995235280E8493009DC0C1 /* ImageCropHandler.swift */,
+				4A995237280E84A2009DC0C1 /* ImageViewHelper.swift */,
+				4A229A7A280E8F8000EAC830 /* Support.swift */,
+			);
+			path = CropImage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +284,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A0E9516280D7A5800FED03A /* ViewController.swift in Sources */,
+				4A0E9544280D80AF00FED03A /* EditViewController.swift in Sources */,
+				4A0E9516280D7A5800FED03A /* HomeView.swift in Sources */,
 				4A0E9512280D7A5800FED03A /* AppDelegate.swift in Sources */,
+				4A995236280E8493009DC0C1 /* ImageCropHandler.swift in Sources */,
 				4A0E9514280D7A5800FED03A /* SceneDelegate.swift in Sources */,
+				4A995234280E8452009DC0C1 /* CropImageViewController.swift in Sources */,
+				4A995238280E84A2009DC0C1 /* ImageViewHelper.swift in Sources */,
+				4A0E9542280D7CB400FED03A /* HomeViewExtension.swift in Sources */,
+				4A229A7B280E8F8000EAC830 /* Support.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,7 +398,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -420,7 +452,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
